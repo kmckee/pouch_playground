@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:client": "webpack-dev-server --progress --colors --inline",
+    "start:server": "./server nodemon server.js",
+    "start": "npm run start:server & npm run start:client"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.0",
+    "express": "^4.14.0",
+    "express-pouchdb": "^1.0.7",
     "pouchdb": "^5.4.5"
   },
   "devDependencies": {
